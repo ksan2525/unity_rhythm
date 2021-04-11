@@ -22,6 +22,9 @@ public class GameController : MonoBehaviour
     private bool _isPlaying = false;
     public GameObject startButton;
 
+    public Text scoreText;
+    private int _score = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +41,7 @@ public class GameController : MonoBehaviour
         if (_isPlaying)
         {
             CheckNextNotes();
+            scoreText.text = _score.ToString();
         }
     }
 
@@ -61,10 +65,12 @@ public class GameController : MonoBehaviour
         }
     }
 
+    
+
     void SpawnNotes(int num)
     {
         Instantiate(notes[num],
-            new Vector3(-4.0f + (2.0f * num), 10.0f, 0),
+            new Vector3(-2.0f + (1.0f * num), 9f, 25),
             Quaternion.identity);
     }
 
@@ -94,5 +100,11 @@ public class GameController : MonoBehaviour
         return Time.time - _startTime;
     }
 
+    public void GoodTimingFunc(int num)
+    {
+        Debug.Log("Line:" + num + "good!");
+        Debug.Log(GetMusicTime());
 
+        _score++;
+    }
 }

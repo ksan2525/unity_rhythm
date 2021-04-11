@@ -651,11 +651,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: acd7b4059ca237943985402d7d1139b8, type: 3}
-    m_FontSize: 14
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -925,14 +925,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notes:
-  - {fileID: 1087486325}
-  - {fileID: 1005477899}
-  - {fileID: 1900135826}
-  - {fileID: 898378884}
-  - {fileID: 898378884}
+  - {fileID: 7825353936700618920, guid: c01399759b42d4b49a97f2c2ac84bf21, type: 3}
+  - {fileID: 2633156358351997148, guid: 9071af1d93e876b43a963b97236c5a1f, type: 3}
+  - {fileID: 6582330886435222114, guid: a526a2d790813254f9ad4e33507c5832, type: 3}
+  - {fileID: 5040814040450027818, guid: c97ca12cbfcfe374ab8753eb2dc6ba61, type: 3}
+  - {fileID: 1158670640988154929, guid: 24f20226c2326c443ad470e655b25d15, type: 3}
   filePass: CSV/TestTiming
   timeOffset: -1
   startButton: {fileID: 1267970447}
+  scoreText: {fileID: 538138086}
 --- !u!4 &892595396
 Transform:
   m_ObjectHideFlags: 0
@@ -974,6 +975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50a80d6785b71c545b3a8066b394e039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineNum: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,6 +1081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50a80d6785b71c545b3a8066b394e039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineNum: 0
 --- !u!1 &1023017569 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2633156358351997148, guid: 9071af1d93e876b43a963b97236c5a1f, type: 3}
@@ -1096,6 +1099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50a80d6785b71c545b3a8066b394e039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineNum: 0
 --- !u!1 &1087486325 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7825353936700618920, guid: c01399759b42d4b49a97f2c2ac84bf21, type: 3}
@@ -1118,6 +1122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50a80d6785b71c545b3a8066b394e039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineNum: 0
 --- !u!1 &1091095421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,7 +1559,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1267970449
 MonoBehaviour:
@@ -1893,7 +1898,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: 225}
+  m_AnchoredPosition: {x: 700, y: 450}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1640373631
@@ -2369,6 +2374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50a80d6785b71c545b3a8066b394e039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineNum: 0
 --- !u!4 &1939187859 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7592760954165834543, guid: 9071af1d93e876b43a963b97236c5a1f, type: 3}
