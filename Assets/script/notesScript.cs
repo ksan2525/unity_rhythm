@@ -23,7 +23,7 @@ public class notesScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position += notes * 20 * Time.deltaTime;
+        this.transform.position += notes * 1 * Time.deltaTime;
 
         if (this.transform.position.y < -5.0f)
         {
@@ -31,6 +31,7 @@ public class notesScript : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        Debug.Log(isInLine);
         if (isInLine)
         {
             CheckInput(_lineKey);
@@ -52,7 +53,7 @@ public class notesScript : MonoBehaviour
         if (Input.GetKeyDown(key))
         {
             _gameController.GoodTimingFunc(lineNum);
-            Destroy(this.gameObject);
+            Destroy (this.gameObject);
         }
     }
 }

@@ -14,7 +14,7 @@ public static class GameUtil
             case 1:
                 return KeyCode.F;
             case 2:
-                return KeyCode.G;
+                return KeyCode.Space;
             case 3:
                 return KeyCode.H;
             case 4:
