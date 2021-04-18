@@ -17,13 +17,14 @@ public class notesScript : MonoBehaviour
     {
         _gameController = GameObject.Find("GameController").GetComponent<GameController>();
         _lineKey = GameUtil.GetKeyCodeByLineNum(lineNum);
-        notes = -transform.up * 0.495f + -transform.forward * Mathf.Sqrt(3);
+        notes =-transform.forward;
+        // -transform.up * (Mathf.Sqrt(6) - Mathf.Sqrt(2)) + -transform.forward * (Mathf.Sqrt(3) + Mathf.Sqrt(2))
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.transform.position += notes * 1 * Time.deltaTime;
+        this.transform.position += notes * 20 * Time.deltaTime;
 
         if (this.transform.position.y < -5.0f)
         {

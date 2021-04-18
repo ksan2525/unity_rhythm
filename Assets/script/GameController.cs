@@ -70,8 +70,8 @@ public class GameController : MonoBehaviour
     void SpawnNotes(int num)
     {
         Instantiate(notes[num],
-            new Vector3(-2.0f + (1.0f * num), 9f, 25),
-            Quaternion.identity);
+            new Vector3(-2.0f + (1.0f * num), 8.5f, 25),
+            Quaternion.Euler(-15f, 0f, 0f));
     }
 
     void LoadCSV()
