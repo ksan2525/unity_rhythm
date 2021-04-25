@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
 
 
 public class notesScript : MonoBehaviour
 {
+    
     public int lineNum;
     private GameController _gameController;
     private bool isInLine = false;
@@ -24,11 +24,11 @@ public class notesScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position += notes * 20 * Time.deltaTime;
+        this.transform.position += notes * 10 * Time.deltaTime;
 
         if (this.transform.position.y < -5.0f)
         {
-            Debug.Log("false");
+            
             Destroy(this.gameObject);
         }
 
@@ -41,18 +41,28 @@ public class notesScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        isInLine = true;
+        if(other.gameObject.tag == "hantei")
+        {
+            isInLine = true;
+        }
+        
     }
 
     void OnTriggerExit(Collider other)
     {
-        isInLine = false;
+        if (other.gameObject.tag == "hantei")
+        {
+            isInLine = false;
+        }
+        
     }
 
     void CheckInput (KeyCode key)
     {
+        Debug.Log("‚¿‚¥‚Á‚­‚¢‚ñ‚Õ‚Á‚Æ");
         if (Input.GetKeyDown(key))
-        {
+        {            
+            
             _gameController.GoodTimingFunc(lineNum);
             Destroy (this.gameObject);
         }

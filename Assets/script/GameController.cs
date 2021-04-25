@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public GameObject[] sphere;
+    public int spheren;
+
     public GameObject[] notes;
     private float[] _timing;
     private int[] _lineNum;
@@ -47,7 +50,7 @@ public class GameController : MonoBehaviour
 
     public void StartGame()
     {
-    
+
         startButton.SetActive(false);
         _startTime = Time.time;
         _audioSource.Play();
@@ -56,21 +59,21 @@ public class GameController : MonoBehaviour
 
     void CheckNextNotes()
     {
-        
+
         while (_timing[_notesCount] + timeOffset < GetMusicTime() && _timing[_notesCount] != 0)
         {
-            Debug.Log(_notesCount);
+
             SpawnNotes(_lineNum[_notesCount]);
             _notesCount++;
         }
     }
 
-    
+
 
     void SpawnNotes(int num)
     {
         Instantiate(notes[num],
-            new Vector3(-2.0f + (1.0f * num), 8.5f, 25),
+            new Vector3(-2.0f + (1.0f * num), 10f, 30.75f),
             Quaternion.Euler(-15f, 0f, 0f));
     }
 
@@ -102,9 +105,21 @@ public class GameController : MonoBehaviour
 
     public void GoodTimingFunc(int num)
     {
+        sphere[num].SetActive(true);
+        spheren = num;
+        Invoke("SetA", 0.1f);
+
+
+
+
         Debug.Log("Line:" + num + "good!");
         Debug.Log(GetMusicTime());
 
         _score++;
     }
+    void SetA()
+    {
+        sphere[spheren].SetActive(false);
+    }
+
 }

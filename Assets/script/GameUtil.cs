@@ -16,9 +16,9 @@ public static class GameUtil
             case 2:
                 return KeyCode.Space;
             case 3:
-                return KeyCode.H;
-            case 4:
                 return KeyCode.J;
+            case 4:
+                return KeyCode.K;
             default:
                 return KeyCode.None;
         }
